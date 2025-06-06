@@ -14,3 +14,10 @@ La base de datos está diseñada en MongoDB y consta de dos colecciones principa
 - Cada recurso está relacionado con un usuario mediante el campo IdUsuario.
 - Se implementan operaciones CRUD (Crear, Leer, Actualizar, Eliminar).
 - Se pueden aplicar filtros por estado, formato y plataforma, además de una búsqueda por nombre del recurso.
+
+
+- Comandos para crear la base de datos y colecciones en MongoDB:
+Ejecutar los siguientes comandos:
+
+// Seleccionar o crear la base de datos 
+use MisRecursosApp
