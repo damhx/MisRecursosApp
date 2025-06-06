@@ -47,27 +47,14 @@ db.recursos.updateOne(
   {
   
     $set: {
-    
-      nombre: "Nuevo nombre",
-      
+      nombre: "Nuevo nombre", 
       genero: "Nuevo genero",
-
-      plataforma: "Netflix",
-      
+      plataforma: "Netflix", 
       estado: "Abandona",
-      
-      formato: "Película",
-      
-      fechaTerminacion: new Date("2025-06-05"),
-      
+      formato: "Película",   
+      fechaTerminacion: new Date("2025-06-05"),      
       valoracion: 3,
-      
       reseña: "Nueva reseña"
-
-      
     }
-    
   }
-  
 )
-
