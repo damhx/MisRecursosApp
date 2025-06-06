@@ -1,10 +1,11 @@
 # MisRecursosApp
 
+-------------------------------------------------------------------------------------------------------------------------------------------
 - Descripción:
 
 MisRecursosApp permite a los usuarios llevar un registro personalizado de sus series, películas y libros. Los usuarios pueden agregar, modificar, eliminar y consultar sus recursos favoritos, también filtrarlos y buscar por nombre. Esta aplicación está diseñada para organizar y hacer seguimiento del progreso y valoración de cada recurso.
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------
 - Generalidades:
 
 La base de datos está diseñada en MongoDB y consta de dos colecciones principales:
@@ -15,7 +16,7 @@ La base de datos está diseñada en MongoDB y consta de dos colecciones principa
 - Se implementan operaciones CRUD (Crear, Leer, Actualizar, Eliminar).
 - Se pueden aplicar filtros por estado, formato y plataforma, además de una búsqueda por nombre del recurso.
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------
 - Comandos para crear la base de datos y colecciones en MongoDB:
 Ejecutar los siguientes comandos:
 
