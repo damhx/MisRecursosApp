@@ -23,16 +23,20 @@ Ejecutar los siguientes comandos:
 
 ```
 // Seleccionar o crear la base de datos:
+
 use MisRecursosApp
 
 // Crear las colecciones:
+
 db.createCollection("Usuarios")
 db.createCollection("Recursos")
 
 // leer las listas:
+
 db.recursos.find()
 
 // Actualizar
+
 db.recursos.updateOne(
   { _id: "id del recurso aca" },
   {
@@ -49,6 +53,31 @@ db.recursos.updateOne(
   }
 )
 
-//Eliminar 
-db.recursos.deleteOne({ _id: "id del recursoi aqui" })
+//Eliminar
+
+db.recursos.deleteOne({ _id: "id del recurso aqui" })
+
+//Filtrar por estado
+
+db.recursos.find({ estado: "Abandonado" })
+
+// por formato
+
+db.recursos.find({ formato: "Libro" })
+
+// por plataforma
+
+db.recursos.find({ plataforma: "Apple TV" })
+
+//Busquedas filtros
+
+db.recursos.find({
+  nombre: { $regex: "palabra_buscar", $options: "i" }
+})
+
+db.recursos.find({
+  formato: "Película",
+  plataforma: "Netflix",
+  nombre: { $regex: "stranger", $options: "i" }
+})
 ```
