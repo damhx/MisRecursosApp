@@ -9,7 +9,7 @@ MisRecursosApp permite a los usuarios llevar un registro personalizado de sus se
 - Generalidades:
 
 La base de datos está diseñada en MongoDB y consta de dos colecciones principales:
-- Clientes: almacena información de los usuarios registrados.
+- Usuarios: almacena información de los usuarios registrados.
 - Recursos: contiene los registros de series, películas y libros asociados a cada usuario.
 
 - Cada recurso está relacionado con un usuario mediante el campo IdUsuario.
@@ -22,3 +22,10 @@ Ejecutar los siguientes comandos:
 
 // Seleccionar o crear la base de datos:
 use MisRecursosApp
+
+// Crear las colecciones:
+db.createCollection("Usuarios")
+db.createCollection("Recursos")
+
+// leer las listas:
+db.recursos.find()
