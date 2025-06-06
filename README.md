@@ -22,3 +22,55 @@ Ejecutar los siguientes comandos:
 
 // Seleccionar o crear la base de datos 
 use MisRecursosApp
+
+// Crear las colecciones
+db.createCollection("clientes")
+db.createCollection("recursos")
+
+// leer las listas
+db.recursos.find()
+
+// Actualizar
+db.recursos.updateOne(
+  { _id: "id del recurso aca" },
+  {
+    $set: {
+      nombre: "Nuevo nombre",
+      genero: "Nuevo genero",
+      plataforma: "Amazon",
+      estado: "Terminado",
+      formato: "Libro",
+      fechaTerminacion: new Date("2025-06-01"),
+      valoracion: 4,
+      reseña: "Nueva reseña"
+    }
+  }
+)
+
+//Eliminar 
+
+db.recursos.deleteOne({ _id: "id del recursoi aqui" })
+
+//Filtrar por estado
+
+db.recursos.find({ estado: "Terminado" })
+
+// por formato
+
+db.recursos.find({ formato: "Serie" })
+
+// por plataforma
+
+db.recursos.find({ plataforma: "Netflix" })
+
+//Busquedas filtros
+
+db.recursos.find({
+  nombre: { $regex: "palabra_buscar", $options: "i" }
+})
+
+db.recursos.find({
+  formato: "Serie",
+  plataforma: "HBO",
+  nombre: { $regex: "game", $options: "i" }
+})
