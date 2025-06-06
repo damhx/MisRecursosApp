@@ -41,17 +41,33 @@ db.recursos.find()
 // Actualizar
 
 db.recursos.updateOne(
+
   { _id: "id del recurso aca" },
+  
   {
+  
     $set: {
+    
       nombre: "Nuevo nombre",
+      
       genero: "Nuevo genero",
+
       plataforma: "Netflix",
+      
       estado: "Abandona",
+      
       formato: "Película",
+      
       fechaTerminacion: new Date("2025-06-05"),
+      
       valoracion: 3,
+      
       reseña: "Nueva reseña"
+
+      
     }
+    
   }
+  
 )
+
