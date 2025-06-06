@@ -20,12 +20,18 @@ La base de datos está diseñada en MongoDB y consta de dos colecciones principa
 - Comandos para crear la base de datos y colecciones en MongoDB:
 Ejecutar los siguientes comandos:
 
+
 // Seleccionar o crear la base de datos:
+
 use MisRecursosApp
 
+
 // Crear las colecciones:
+
 db.createCollection("Usuarios")
 db.createCollection("Recursos")
 
+
 // leer las listas:
+
 db.recursos.find()
